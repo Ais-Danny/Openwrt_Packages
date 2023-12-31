@@ -4,6 +4,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=irq-balance
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
+PKG_MAINTAINER:=aisdannys.top@gmail.com
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -11,10 +12,12 @@ define Package/$(PKG_NAME)
   	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=IRQ Balance
+
 endef
 
 define Package/$(PKG_NAME)/description
 	A custom package for irq-balance
+	irq ipq40xx!!
 endef  
 
 define Build/Compile 
