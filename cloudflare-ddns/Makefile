@@ -26,7 +26,7 @@ endef
 define Package/cloudflare-ddns/install
 	$(INSTALL_DIR) $(1)/opt/cloudflare/
 	$(CP) ./files/opt/cloudflare/cloudflare_ddns.sh $(1)/opt/cloudflare/cloudflare_ddns.sh
-	chmod 755 $(1)/etc/init.d/irq-balance
+	chmod 755 $(1)/opt/cloudflare/cloudflare_ddns.sh
 	$(INSTALL_DIR) $(1)/etc/crontabs
 	echo "*/1 * * * * /opt/cloudflare/cloudflare_ddns.sh >/dev/null 2>&1" > $(1)/etc/crontabs/root
 endef
