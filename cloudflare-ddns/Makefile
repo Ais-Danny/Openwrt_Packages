@@ -11,7 +11,7 @@ define Package/cloudflare-ddns
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=Cloudflare DDNS
-	DEPENDS:=+jq
+	DEPENDS:=+curl +jq
 	MENU:=1
 	SUBMENU:=ddns Utilities
 endef
