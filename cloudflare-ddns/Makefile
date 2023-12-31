@@ -28,7 +28,7 @@ define Package/cloudflare-ddns/install
 	$(CP) ./files/opt/cloudflare/cloudflare_ddns.sh $(1)/opt/cloudflare/cloudflare_ddns.sh
 	chmod 755 $(1)/etc/init.d/irq-balance
 	$(INSTALL_DIR) $(1)/etc/crontabs
-	echo "*/1 * * * * /opt/cloudflare/cloudflare_ddns.sh" > $(1)/etc/crontabs/root
+	echo "*/1 * * * * /opt/cloudflare/cloudflare_ddns.sh >/dev/null 2>&1" > $(1)/etc/crontabs/root
 endef
 
 $(eval $(call BuildPackage,cloudflare-ddns))
