@@ -36,7 +36,7 @@ jobs:
       run: |
         mkdir -p openwrt/package/feeds/helloworld
         cd openwrt
-        cp -r ./package/feeds/helloworld/luci-app-ssr-plus openwrt/package/feeds/helloworld/
+        cp -r ./feeds/helloworld/luci-app-ssr-plus openwrt/package/feeds/helloworld/
 
     - name: Configure build
       run: |
