@@ -37,11 +37,9 @@ jobs:
     #     mkdir -p openwrt/package/feeds/helloworld
     #     cp -r ./package/feeds/helloworld/luci-app-ssr-plus openwrt/package/feeds/helloworld/
 
-    # - name: Configure build
-    #   run: |
-    #     cd openwrt
-    #     echo "CONFIG_PACKAGE_luci-app-ssr-plus=y" >> .config
-    #     make defconfig
+    - name: Configure build
+      run: |
+        make defconfig
 
     - name: Build luci-app-ssr-plus
       run: |
