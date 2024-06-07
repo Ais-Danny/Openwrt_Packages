@@ -32,10 +32,10 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
-    # - name: Copy luci-app-ssr-plus package
-    #   run: |
-    #     mkdir -p openwrt/package/feeds/helloworld
-    #     cp -r ./package/feeds/helloworld/luci-app-ssr-plus openwrt/package/feeds/helloworld/
+    - name: Copy luci-app-ssr-plus package
+      run: |
+        cp -r ./openwrt/package/feeds/helloworld/luci-app-ssr-plus openwrt/package/feeds/helloworld/
+
 
     - name: Configure build
       run: |
