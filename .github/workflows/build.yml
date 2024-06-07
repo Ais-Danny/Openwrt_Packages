@@ -39,6 +39,7 @@ jobs:
 
     - name: Configure build
       run: |
+        cd openwrt
         make defconfig
 
     - name: Build luci-app-ssr-plus
